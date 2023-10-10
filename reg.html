@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Effettua la registrazione</h1>
+        <form method="POST" action="rg.php">
+            <label for="username">username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" required>
+
+            <input name="submit" type="submit">
+        </form>
+
+        <a href="log.html">login</a>
+    </body>
+
+    <script>
+        let username = document.getElementById('username');
+        let password = document.getElementById('password');
+        let form = document.querySelector('form');
+
+        form.addEventListener('submit', function (event) {
+            if (username.value === '' || password.value === '') {
+                alert("Inserire nome e password");
+                event.preventDefault(); 
+            }
+        });
+    </script>
+
+</html>
